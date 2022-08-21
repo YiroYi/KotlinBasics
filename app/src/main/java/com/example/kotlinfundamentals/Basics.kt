@@ -52,30 +52,29 @@ fun main(){
 //        println("Use technique")
 //    }
 
-    var season = 3
-
-    when(season) {
-        1 -> println("Spring")
-        2 -> println("Summer")
-        3 -> println("Autum")
-        4 -> println("Winter")
-        else -> println("Invalid season")
+//  WHILE LOOP
+    var x = 1
+    while(x <= 10) {
+        print("$x")
+        x++
     }
+    println("\n While is executed")
 
-    var month = 4
-    when(month){
-        in 3..5 -> println("Spring")
-        in 6..8 -> println("Summer")
-        in 9..12 -> println("Autum")
-        1, 2 -> println("Winter")
-        else -> println("Invalid season")
-    }
+    var y = 10
+    do{
+        println("$y")
+        y++
+    }while(y <= 20)
 
-    var x: Any = "Yiro Yi"
-    when(x){
-        is Int -> println("$x is an Int")
-        is Double -> println("$x is an Double")
-        is String -> println("$x is an String")
-        else -> println("Type not recognized")
+    var temp = "cold"
+    var roomTemp = 1
+
+    while(temp == "cold"){
+      roomTemp++
+      print("\n This is $roomTemp")
+      if(roomTemp >= 10){
+        temp = "confy"
+        println("Temp is $temp")
+      }
     }
 }
