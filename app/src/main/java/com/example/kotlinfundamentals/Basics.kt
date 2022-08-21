@@ -52,5 +52,30 @@ fun main(){
 //        println("Use technique")
 //    }
 
-    
+    var season = 3
+
+    when(season) {
+        1 -> println("Spring")
+        2 -> println("Summer")
+        3 -> println("Autum")
+        4 -> println("Winter")
+        else -> println("Invalid season")
+    }
+
+    var month = 4
+    when(month){
+        in 3..5 -> println("Spring")
+        in 6..8 -> println("Summer")
+        in 9..12 -> println("Autum")
+        1, 2 -> println("Winter")
+        else -> println("Invalid season")
+    }
+
+    var x: Any = "Yiro Yi"
+    when(x){
+        is Int -> println("$x is an Int")
+        is Double -> println("$x is an Double")
+        is String -> println("$x is an String")
+        else -> println("Type not recognized")
+    }
 }
