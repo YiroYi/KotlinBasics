@@ -90,27 +90,45 @@ fun main(){
 //    print("$i")
 //  }
 
-  var z = 0
-  for (y in 0..9) {
-    z += y
-  }
-  println(z)
-
-  for (i in 1 until 20) {
-    print("$i")
-    if(i/2 == 5) {
-      break
-    }
-  }
-  print("Done with the loop")
-
-  //break keyword breaks the loop, stops the for loop
-
-  for (i in 1 until 20) {
-    print("$i")
-    if(i/2 == 5) {
-      continue
-    }
-  }
-  // continue: Stop the context block and the go to the next iteration
+//  var z = 0
+//  for (y in 0..9) {
+//    z += y
+//  }
+//  println(z)
+//
+//  for (i in 1 until 20) {
+//    print("$i")
+//    if(i/2 == 5) {
+//      break
+//    }
+//  }
+//  print("Done with the loop")
+//
+//  //break keyword breaks the loop, stops the for loop
+//
+//  for (i in 1 until 20) {
+//    print("$i")
+//    if(i/2 == 5) {
+//      continue
+//    }
+//  // continue: Stop the context block and the go to the next iteration
+  
 }
+
+// Parameters
+//fun addUp(a: Int, b: Int) : Int{
+//  return a + b
+//}
+//
+//fun avg(a: Double, b: Double): Double{
+//   return (a + b) / 2
+//}
+//
+//fun myFunction() {
+//  // what you pass to function is arguments
+//  var result =  addUp(2, 3)
+//  var averageResult = avg(9.5, 8.9)
+//  print("The result is $result")
+//  print("The average is $averageResult")
+//}
+
