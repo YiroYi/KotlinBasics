@@ -112,7 +112,35 @@ fun main(){
 //      continue
 //    }
 //  // continue: Stop the context block and the go to the next iteration
-  
+
+  //NULLABLES
+//  var name :String = "Denis"
+//
+//  var nameNullable : String? = "Yiro"
+//
+//  //nameNullable = null
+//  var len3 = nameNullable?.length
+//  // You can validate if something is null with the above ? question mark
+//  // after the variable name
+//
+//  //Other way is by using Let
+//  nameNullable?.let { print("${it.length}")}
+//  if(nameNullable != null){
+//    var len2 = nameNullable.length
+//  }else{
+//    null
+//  }
+// ELVIS OPERATOR it is to handle null state if the variable is null the assign some value
+//  var nullable : String? = "Denis"
+//  nullable?.let {print(it.length)}
+//  nullable = null
+//
+//  val name = nullable ?: "Guest"
+//  println(name)
+  //MODULE ONE COMPLETE
+
+  //MODULE TWO BEGINS
+
 }
 
 // Parameters
