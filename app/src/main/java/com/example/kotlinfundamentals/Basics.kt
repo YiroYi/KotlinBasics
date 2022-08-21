@@ -53,28 +53,64 @@ fun main(){
 //    }
 
 //  WHILE LOOP
-    var x = 1
-    while(x <= 10) {
-        print("$x")
-        x++
+//    var x = 1
+//    while(x <= 10) {
+//        print("$x")
+//        x++
+//    }
+//    println("\n While is executed")
+//
+//    var y = 10
+//    do{
+//        println("$y")
+//        y++
+//    }while(y <= 20)
+//
+//    var temp = "cold"
+//    var roomTemp = 1
+//
+//    while(temp == "cold"){
+//      roomTemp++
+//      print("\n This is $roomTemp")
+//      if(roomTemp >= 10){
+//        temp = "confy"
+//        println("Temp is $temp")
+//      }
+//    }
+   // FOR LOOPS
+//  for(num in 1..10){
+//    print("$num")
+//  }
+//
+//  for(i in 1 until 10){
+//    print("$i")
+//  }
+//
+//  for(i in 10 downTo 1 step 2){
+//    print("$i")
+//  }
+
+  var z = 0
+  for (y in 0..9) {
+    z += y
+  }
+  println(z)
+
+  for (i in 1 until 20) {
+    print("$i")
+    if(i/2 == 5) {
+      break
     }
-    println("\n While is executed")
+  }
+  print("Done with the loop")
 
-    var y = 10
-    do{
-        println("$y")
-        y++
-    }while(y <= 20)
+  //break keyword breaks the loop, stops the for loop
 
-    var temp = "cold"
-    var roomTemp = 1
-
-    while(temp == "cold"){
-      roomTemp++
-      print("\n This is $roomTemp")
-      if(roomTemp >= 10){
-        temp = "confy"
-        println("Temp is $temp")
-      }
+  for (i in 1 until 20) {
+    print("$i")
+    if(i/2 == 5) {
+      continue
     }
+  }
+  // continue: Stop the context block and the go to the next iteration
 }
