@@ -138,10 +138,59 @@ fun main(){
 //  val name = nullable ?: "Guest"
 //  println(name)
   //MODULE ONE COMPLETE
-
+  // myNum(4)
   //MODULE TWO BEGINS
-
+  var person = Person("Yiro", "Yi")
+  var personTwo = Person()
+  person.hobby = "Billiards"
+  person.stateHobby()
+  var personThird = Person("Yiro", "Yi", 35)
+  personThird.age = 33
+  println("This person is ${personThird.age} years old")
 }
+
+
+// In classes there are two constructors the one that is in the definition of the class
+// for example class Person(firtName: String = "John", lastName: String = "Doe")
+// and the Member secondary contructor that it is defined inside the class
+
+class Person(firstName: String = "John", lastName: String = "Doe") {
+  // Member variables or properties this is kind of define an accessor
+  var age : Int? = null
+  var hobby: String = "Watch Netflix"
+  var firstName: String? = null
+
+  init { //This initializer runs the class constructor
+    this.firstName = firstName // the this.firstName will be the assignation after the = the first name will come from the above definition after define class
+    println("Person created and he is $firstName $lastName")
+  }
+
+  // we can run functions inside this constructor as well
+  constructor(firstName: String, lastName: String, age: Int): this(firstName, lastName) {
+    this.age = age
+    println("Im alive with $age")
+  }
+  // Member Functions - Methods
+  fun stateHobby() {
+    println("$firstName hobby is $hobby")
+  }
+}
+
+// In Kotlin the cariables that are not pass in the parameter can be assigned my message assignation using . personTwo.hobby = "Billiards"
+
+// Function and variables Scopes => This is important
+//fun myNum(num: Int) {
+//  var num = num
+//  print(num)
+//}
+// The num that we are printing above is the one of the var not the one in the parameter
+// if we do:
+//fun myNum(num: Int) {
+//  num = 5
+//  print(num)
+//} It is an error because that num is not the one of the parameters, in Kotlin can't reasign variables
+// that come in the parameters
+
 
 // Parameters
 //fun addUp(a: Int, b: Int) : Int{
