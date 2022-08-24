@@ -149,38 +149,56 @@ fun main(){
 //  var personThird = Person("Yiro", "Yi", 35)
 //  personThird.age = 33
 //  println("This person is ${personThird.age} years old")
-  var myCar = Car()
-  println(myCar.myBrand)
-  myCar.maxSpeed = 2500
-  println(myCar.maxSpeed)
+
+  // CLASS CAR GETTER AND SETTERS
+//  var myCar = Car()
+//  println(myCar.myBrand)
+//  myCar.maxSpeed = 2500
+//  println(myCar.maxSpeed)
+
+//DATA CLASS
+//  val userOne = User(1, "Yiro")
+//
+//  val userTwo = userOne.copy(name = "Yujin") // can copy an object
+//  println(userTwo.name)
+//  println(userTwo.component1()) // the class method component() prints the element of the constructor in this case it is ID
+//  println(userTwo.component2()) // the class method component() prints the element of the constructor in this case it is ID
+//
+//  // we can do deconstruct assignation
+//  val (id, name) = userTwo
+//  println(id)
+//  println(name)
 }
 
-// CLASS CAR
 
-class Car() {
-  lateinit var owner : String // with lateinit help you to don't initialize the variable inmediately
+//// DATA CLASS
+//data class User(val id: Long, val name: String) // Data class must have at least one parameter
 
-  val myBrand: String = "BMW"
-    get() {
-      return field.lowercase()
-    }
-  //The above is the way to create a custom getter
-
-  var maxSpeed: Int = 250
-    //get() = field
-    set(value) {
-      field = if(value > 0) value else throw IllegalArgumentException("Speed can't be less than 0")
-    }
-
-  var myModel: String = "M5"
-    private set // this means I can only change inside of the class, not outside with aoutside means
-    // outside calls the object car.myModel = M3
-
-
-  init {
-    this.owner = "Frank"
-  }
-}
+// CLASS CAR GETTER AND SETTERS
+//class Car() {
+//  lateinit var owner : String // with lateinit help you to don't initialize the variable inmediately
+//
+//  val myBrand: String = "BMW"
+//    get() {
+//      return field.lowercase()
+//    }
+//  //The above is the way to create a custom getter
+//
+//  var maxSpeed: Int = 250
+//    //get() = field
+//    set(value) {
+//      field = if(value > 0) value else throw IllegalArgumentException("Speed can't be less than 0")
+//    }
+//
+//  var myModel: String = "M5"
+//    private set // this means I can only change inside of the class, not outside with aoutside means
+//    // outside calls the object car.myModel = M3
+//
+//
+//  init {
+//    this.owner = "Frank"
+//  }
+//}
 
 // CLASS PERSON//
 // In classes there are two constructors the one that is in the definition of the class
