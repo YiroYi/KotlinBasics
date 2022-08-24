@@ -65,14 +65,62 @@ class ElectricCar(maxSpeed: Double, name: String, brand: String, batteryLife: Do
   }
 }
 
-fun main() {
-  var audiA3 = Car(200.0,"A3", "Audi")
-  var teslaS = ElectricCar(200.0,"S-Model", "TESLA", 85.0)
+// Abstract Classes
+abstract class Mammal(private val name: String, private val origin: String, private val weight: Double) {
+  // Abstract properties (Must be overriden by subclasses)
+  abstract var maxSpeed: Double
 
-  teslaS.extendRange(200.0)
-  audiA3.drive(200.0)
-  teslaS.drive(200.0)
-  teslaS.drive()
-  teslaS.brake()
-  audiA3.brake()
+  // Abstract Methods (Must be implemented in the subclasses)
+  abstract fun run()
+  abstract fun breath()
+
+  // Concrete (Non Abstract) Method
+  fun displayDetails() {
+    println("Name $name, Origin: $origin, Weight: $weight " + "Max Speed: $maxSpeed")
+  }
 }
+
+class Human(name: String, origin: String, weight: Double, override  var maxSpeed: Double): Mammal(name, origin, weight) {
+  override fun run() {
+    println("Runs on two legs")
+  }
+
+  override fun breath() {
+    println("Breath through mouth or nose")
+  }
+}
+
+class Elephant(name: String, origin: String, weight: Double, override  var maxSpeed: Double): Mammal(name, origin, weight) {
+  override fun run() {
+    println("Runs on four legs")
+  }
+
+  override fun breath() {
+    println("Breath through the trunk")
+  }
+}
+
+fun main() {
+  //INHERITANCE AND INTERFACE
+//  var audiA3 = Car(200.0,"A3", "Audi")
+//  var teslaS = ElectricCar(200.0,"S-Model", "TESLA", 85.0)
+//
+//  teslaS.extendRange(200.0)
+//  audiA3.drive(200.0)
+//  teslaS.drive(200.0)
+//  teslaS.drive()
+//  teslaS.brake()
+//  audiA3.brake()
+
+  //ABSTRACTION
+  val human = Human("yiro", "Mexico", 76.6, 28.0)
+  val elephant = Elephant("Dumbo", "Mexico", 176.6, 40.0)
+
+  human.run()
+  elephant.run()
+
+  human.breath()
+  elephant.breath()
+}
+
+// Notes can't create abstract or interface from class
